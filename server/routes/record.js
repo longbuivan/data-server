@@ -159,5 +159,21 @@ recordRoutes.route("/listings/delete/:id").delete((req, res) => {
       }
     });
 });
+// Get Raw Data
+recordRoutes.route("/bidEvents").get(async function (req, res) {
+  const dbConnect = dbo.getDb();
+
+  dbConnect
+    .collection("raw-bid-event")
+    .find({})
+    .limit(100)
+    .toArray(function (err, result) {
+      if (err) {
+        res.status(400).send("Error fetching listings!");
+      } else {
+        res.json(result);
+      }
+    });
+});
 
 module.exports = recordRoutes;

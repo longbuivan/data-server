@@ -10,7 +10,8 @@
     "mongodb",
     "node",
     "express",
-    "react"
+    "react",
+    "ip"
   ],
   "author": "Long Bui",
   "license": "ISC",

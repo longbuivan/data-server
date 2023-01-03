@@ -14,7 +14,8 @@ module.exports = {
         return callback(err);
       }
 
-      dbConnection = db.db("rtbSpark");
+      // dbConnection = db.db("rtbSpark");
+      dbConnection = db.db("local_test");
       console.log("Successfully connected to MongoDB.");
 
       return callback();
